@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Acer Smart Home</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Welcome to Acer Smart Home</string>
+    <string name="user_management">User Management</string>
+    <string name="entrance_log">Check Entrance Log</string>
+    <string name="what_do_you_want_to_do">What do you want to do?</string>
+    <string name="emergency_call">Emergency Call</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_user_management">User Management</string>
+    <string name="title_activity_entrance_log">Entrance Log</string>
+    <string name="title_activity_emergency_call">Emergency_Call</string>
+
+</resources>
