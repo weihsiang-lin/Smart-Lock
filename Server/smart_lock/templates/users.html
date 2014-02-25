@@ -1,0 +1,26 @@
+<h2>User Management</h2>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>IMEI</td>
+        <td>Enabled</td>
+        <td>Actions</td>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.imei }}</td>
+        <td>{{ user.auth }}</td>
+        <td>
+            {% if user.auth %}
+            <input type="button" value="Disable" onclick="location.href='/demo/users/disable/{{ user.id }}'" />
+            {% else %}
+            <input type="button" value="Enable" onclick="location.href='/demo/users/enable/{{ user.id }}'" />
+            {% endif %}
+            <input type="button" value="Delete" onclick="location.href='/demo/users/delete/{{ user.id }}'" />
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/demo/users/create">Create</a><br />
+<a href="/demo">Return to Index</a>

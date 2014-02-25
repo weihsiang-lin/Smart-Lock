@@ -1,0 +1,10 @@
+<h2>Create User</h2>
+<form method="POST" action="/demo/users/create/">
+    {% csrf_token %}
+    Name: <input type="text" name="name" /></br>
+    IMEI: <input type="text" name="imei" /></br>
+    Enabled: <input type="checkbox" name="enabled" value="1" /><br />
+    Administrator: <input type="checkbox" name="administrator" value="1" /><br />
+    <input type="submit" value="Create" />
+    <input type="button" value="Cancel" onclick="location.href='/demo/users'" />
+</form>

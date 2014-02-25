@@ -1,0 +1,35 @@
+<h2>Entrance Log</h2>
+{% if logs %}
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Time</td>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.id }}</td>
+            <td>{{ log.user.name }}</td>
+            <td>{{ log.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No logs are available.</p>
+{% endif %}
+<div class="pagination">
+    <span class="step-links">
+        {% if logs.has_previous %}
+            <a href="?page={{ logs.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ logs.number }} of {{ logs.paginator.num_pages }}.
+        </span>
+
+        {% if logs.has_next %}
+            <a href="?page={{ logs.next_page_number }}">Next</a>
+        {% endif %}
+    </span>
+</div>
+<a href="/demo">Return to Index</a>
